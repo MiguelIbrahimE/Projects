@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--Head-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Touristic Atrractions</title>
+  <link rel="icon" href="Lebanese_Flag.jpg">
+  <link href='https://fonts.googleapis.com/css?family=Cedarville Cursive' rel='stylesheet'>
+  <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Tangerine">
+</head>
+<body>
+  <!-- Start of HTML and NavBar-->
+  <div class="container">
+    <div class="row">
+      <div class="menu-btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <nav class="navbar">
+        <div class="logo">
+  
+         <a href="https://unified-lebanon.netlify.app/"><img src="Lebanese_Flag.jpg" style="width:30px"></a>
+        </div>
+        <ul class="main-menu">
+          <li class="list-items"><a href="index.html">Home</a></li>
+          <li class="list-items"><a href="Restaurants.html">Restaurants</a></li>
+        
+        </ul>
+      </nav>
+    </div>
+  
+  </div>
+
+ 
+  <script>
+    //Start of Script and card layouts 
+    document.querySelector(".menu-btn").addEventListener("click", abc);
+function abc() {
+  document.querySelector(".main-menu").classList.toggle("show");
+}
+    $(document).ready(function () {
+      var zindex = 10;
+    
+      $("div.card").click(function (e) {
+        e.preventDefault();
+    
+        var isShowing = false;
+    
+        if ($(this).hasClass("show")) {
+          isShowing = true;
+        }
+    
+        if ($("div.cards").hasClass("showing")) {
+          // a card is already in view
+          $("div.card.show").removeClass("show");
+    
+          if (isShowing) {
+            // this card was showing - reset the grid
+            $("div.cards").removeClass("showing");
+          } else {
+            // this card isn't showing - get in with it
+            $(this).css({ zIndex: zindex }).addClass("show");
+          }
+    
+          zindex++;
+        } else {
+          // no cards in view
+          $("div.cards").addClass("showing");
+          $(this).css({ zIndex: zindex }).addClass("show");
+    
+          zindex++;
+        }
+      });
+    });
+    function myFunction() {
+    }
+  //End of script 
+  </script>
+  
+  <style>
+    /*Start of CSS and navbar*/
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    
+    ul {
+      list-style: none;
+    }
+    .container {
+      background-color: black;
+    }
+    .row {
+      width: 80%;
+      margin: auto;
+    }
+    .logo {
+      font-size: 1.5rem;
+      
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      height: 50px;
+      align-items: center;
+    }
+    .navbar .main-menu {
+      display: flex;
+    }
+    .main-menu li a {
+      display: inline-block;
+      padding: 10px 20px;
+    }
+    
+    .menu-btn {
+      display: none;
+    }
+    .section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url(https://i.postimg.cc/vZrkVwB5/joe-woods-4-Zaq5x-Y5-M-c-unsplash.jpg)
+        no-repeat center center/cover;
+    }
+    
+    .row-content h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .row-content p {
+      font-size: 1.2rem;
+      text-align: center;
+      line-height: 1.6;
+    }
+    /*All size matters, allocate reasonbale size for all screens*/
+    @media screen and (max-width: 268px) {
+      .main-menu {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background-color: #252525;
+        transition: 0.5s all ease;
+        /* visibility: hidden; */
+        display: none;
+        align-items: center;
+        transform: translateX(-800px);
+        padding-top: 60px;
+      }
+    
+      .main-menu.show {
+        transform: translateX(0px);
+        transition: 0.5s all ease;
+      }
+      .main-menu li a {
+        margin-bottom: 10px;
+        display: block;
+      }
+      .menu-btn {
+        display: block;
+        position: absolute;
+        color: white;
+        top: 10px;
+        right: 30px;
+        font-size: 2rem;
+      }
+    }
+    /*Make everything pretty by adding fonts*/
+    @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 200;
+    src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xKydSBYKcSV-LCoeQqfX1RYOo3i94_wlxdr.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdr.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7g.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdr.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdr.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 900;
+    src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwlxdr.ttf) format('truetype');
+  }
+  body {
+    background: #dce1df;
+    color: #4f585e;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-rendering: optimizeLegibility;
+  }
+ 
+  /*Add Cards and their specialties*/
+  div.cards {
+    margin: 50px auto;
+    max-width: 1060px;
+    text-align: center;
+    max-height: 1060px;
+  }
+  div.card {
+    background: #ffffff;
+    display: inline-block;
+    margin: 8px;
+    max-width: 380px;
+    perspective: 1000;
+    position: relative;
+    text-align: left;
+    transition: all 0.3s 0s ease-in;
+    width: 370px;
+    z-index: 1;
+    max-height: 600px;
+    height:fit-content;
+  }
+  div.card img {
+    max-width:370px;
+    width:370px;
+    height:300px;
+    max-height: 600px;
+  }
+  div.card .card__image-holder {
+    
+    height: 0px;
+    padding-bottom: 72%;
+  }
+  div.card div.card-title {
+    background: #ffffff;
+    padding: 6px 15px 10px;
+    position: relative;
+    z-index: 0;
+  }
+  div.card div.card-title a.toggle-info {
+    border-radius: 32px;
+    height: 32px;
+    padding: 0;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    width: 32px;
+  }
+  div.card div.card-title a.toggle-info span {
+    background: #ffffff;
+    display: block;
+    height: 2px;
+    position: absolute;
+    top: 16px;
+    transition: all 0.15s 0s ease-out;
+    width: 12px;
+  }
+  div.card div.card-title a.toggle-info span.left {
+    right: 14px;
+    transform: rotate(45deg);
+  }
+  div.card div.card-title a.toggle-info span.right {
+    left: 14px;
+    transform: rotate(-45deg);
+  }
+  div.card div.card-title h2 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    margin: 0;
+    padding: 0;
+  }
+  div.card div.card-title h2 small {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+  }
+  div.card div.card-description {
+    padding: 0 15px 10px;
+    position: relative;
+    font-size: 14px;
+  }
+  div.card div.card-actions {
+    box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.075);
+    padding: 10px 15px 20px;
+    text-align: center;
+  }
+  div.card div.card-flap {
+    background: #d9d9d9;
+    position: absolute;
+    width: 100%;
+    transform-origin: top;
+    transform: rotateX(-90deg);
+  }
+  div.card div.flap1 {
+    transition: all 0.3s 0.3s ease-out;
+    z-index: -1;
+  }
+  div.card div.flap2 {
+    transition: all 0.3s 0s ease-out;
+    z-index: -2;
+  }
+  div.cards.showing div.card {
+    cursor: pointer;
+    opacity: 0.6;
+    transform: scale(0.88);
+  }
+  .no-touch div.cards.showing div.card:hover {
+    opacity: 0.94;
+    transform: scale(0.92);
+  }
+  div.card.show {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+  }
+  div.card.show div.card-title a.toggle-info {
+    background: #ff6666 !important;
+  }
+  div.card.show div.card-title a.toggle-info span {
+    top: 15px;
+  }
+  div.card.show div.card-title a.toggle-info span.left {
+    right: 10px;
+  }
+  div.card.show div.card-title a.toggle-info span.right {
+    left: 10px;
+  }
+  div.card.show div.card-flap {
+    background: #ffffff;
+    transform: rotateX(0deg);
+  }
+  div.card.show div.flap1 {
+    transition: all 0.3s 0s ease-out;
+  }
+  div.card.show div.flap2 {
+    transition: all 0.3s 0.2s ease-out;
+  }
+  a{
+    color:rgb(221, 197, 197);
+    
+  }
+ 
+  /*End of CSS*/
+  </style>
+  <!--Cards-->
+  
+  <div class="cards">
+    <div class="card">
+      <div class="card__image-holder">
+        <img class="card__image" src="./Heritage/Anjar.jpg"/>
+      </div>
+      <div class="card-title">
+        </a>
+        <h2>
+          
+          <a href="https://goo.gl/maps/feVdfPa5RGkyQkyn7"target="_blank">Anjar</a>
+          
+        </h2>
+      <small>NB: If you are going to Anjar also consider going to <a href="https://goo.gl/maps/4EobUP5eoFAT4Gru5">Baalbek.</a></small>
+      </div>  
+    </div>
+    
+    <div class="card">
+      <div class="card__image-holder">
+        <img class="card__image" src="./Heritage/Baalbek.jpg" />
+      </div>
+      <div class="card-title">
+        <h2>
+          
+          <a href="https://goo.gl/maps/4EobUP5eoFAT4Gru5"target="_blank">Baalbek</a>
+          </h2>
+          <small> Extra things to do in Baalbek: <a href="https://goo.gl/maps/WJYxUuZ1TvgptTbF8"target="_blank">Ksara Winery</a> 	&#11049; <a href="https://www.tripadvisor.com/Restaurant_Review-g295421-d12029253-Reviews-Lakkis_Farm_Restaurant-Baalbeck_Bekaa_Governorate.html"> Eat Sfiha</a></small>
+        
+       
+      </div>
+     
+    </div>
+    <div class="card">
+      <div class="card__image-holder">
+        <img class="card__image" src="./Heritage/Beiteddine.jpg" />
+      </div>
+      <div class="card-title">
+        <a href="#" class="toggle-info btn">
+          <span class="left"></span>
+          <span class="right"></span>
+        </a>
+        <h2>
+          
+           <a href="https://goo.gl/maps/ocUSzd1TdEXu3ibT8"target="_blank">Beit Eddine</a>
+          </h2>
+          <small>Also go to: <a href="https://goo.gl/maps/nCbCgh2M9NcVe4Q87">Deir El Qamar</a></small>
+          
+      </div>
+      
+    </div>
+    <div class="card">
+      <div class="card__image-holder">
+        <img class="card__image" src="./Heritage/Byblos.jpg" />
+      </div>
+      <div class="card-title">
+        <h2>
+          
+          <a href="https://goo.gl/maps/ETQPyLyeVtkofguG7"target="_blank">Byblos</a>
+          
+        </h2>
+        <small>Extra things to do in: <a href="https://www.the961.com/12-things-to-do-in-the-historical-city-of-jbeil/"> Jbeil</a></small>
+          
+      </div>
+    </div>
+
+  
+    <div class="card">
+      <div class="card__image-holder">
+        <img class="card__image" src="./Heritage/Kadisha.PNG"  style="width:max-content;height:max-content" />
+      </div>
+      <div class="card-title">
+        
+        <h2>
+        
+          <a href="https://goo.gl/maps/JAK85eujmZAnU3rG8"target="_blank">Kadisha Valley</a>
+          
+          
+        </h2>
+        <small>This picture was extracted from: <a href="https://www.nationalgeographic.com/travel/article/qadisha-valley-mountain-hermit-dario-escobar"target="_blank">National Geographic</a></small>
+        
+      <small><br>Also consider going to: <a href ="https://goo.gl/maps/TAP9s9C6guwoUTBZ8">Ceders Mountain</a></small>
+      </div>
+      
+    </div>
+  
+    <div class="card">
+      <div class="card__image-holder">
+        <img class="card__image" src="./Heritage/Tyre.PNG"  />
+      </div>
+      <div class="card-title">
+        <a href="#" class="toggle-info btn">
+          <span class="left"></span>
+          <span class="right"></span>
+        </a>
+        <h2>
+          
+          <a href="https://goo.gl/maps/NkdvCouFXvoDz1xr7"target="_blank">Tyre </a>
+          </h2>
+          <small>Image from britannica: <a href="https://www.britannica.com/place/Tyre"target="_blank">Link</a></small>
+          <br>
+          <small> More to see in Tyre: <a href="https://lebanonexplorer.com/15-best-things-to-do-in-tyre-lebanon/"target="_blank">Link</a> </small> 
+        
+      </div>
+    </div>
+  
+   
+  
+   
+  
+    
+    </div>
+  
+  </div>
+  <!-- End of Card Layout-->
+</body>
+</html>
+<!--End of HTML page-->
