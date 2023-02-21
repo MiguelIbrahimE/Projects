@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--Head-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Touristic Atrractions</title>
+  <link rel="icon" href="../Lebanese_Flag.ico">
+  <link href='https://fonts.googleapis.com/css?family=Cedarville Cursive' rel='stylesheet'>
+  <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Tangerine">
+  <link rel="stylesheet"href="../CSS/Tourism.css">
+
+</head>
+<body>
+  <!-- Start of HTML and NavBar-->
+  <div class="container">
+    <div class="row">
+      <div class="menu-btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <nav class="navbar">
+        <div class="logo">
+  
+         <a href="../index.html"><img src="../Lebanese_Flag.ico" style="width:30px"></a>
+        </div>
+        <ul class="main-menu">
+          <li class="list-items"><a href="../index.html">Home</a></li>
+          <li class="list-items"><a href="Restaurants.html">Restaurants</a></li>
+          <li class="list-items"><a href="Transportation.html">Transportation</a></li>
+          <li class="list-items"><a href="Lebanon.html">Map of Lebanon</a></li>
+        
+        </ul>
+      </nav>
+    </div>
+  
+  </div>
+
+ 
+  <script>
+    //Start of Script and card layouts 
+    document.querySelector(".menu-btn").addEventListener("click", abc);
+function abc() {
+  document.querySelector(".main-menu").classList.toggle("show");
+}
+    $(document).ready(function () {
+      var zindex = 10;
+    
+      $("div.card").click(function (e) {
+        e.preventDefault();
+    
+        var isShowing = false;
+    
+        if ($(this).hasClass("show")) {
+          isShowing = true;
+        }
+    
+        if ($("div.cards").hasClass("showing")) {
+          // a card is already in view
+          $("div.card.show").removeClass("show");
+    
+          if (isShowing) {
+            // this card was showing - reset the grid
+            $("div.cards").removeClass("showing");
+          } else {
+            // this card isn't showing - get in with it
+            $(this).css({ zIndex: zindex }).addClass("show");
+          }
+    
+          zindex++;
+        } else {
+          // no cards in view
+          $("div.cards").addClass("showing");
+          $(this).css({ zIndex: zindex }).addClass("show");
+    
+          zindex++;
+        }
+      });
+    });
+    function myFunction() {
+    }
+  //End of script 
+  </script>
+  
+  <!--Cards-->
+  
+  <div class="cards">
+    <div class="card">
+      <div class="card__image-holder">
+        <img class="card__image" src="../Heritage/Anjar.png"/>
+      </div>
+      <div class="card-title">
+        </a>
+        <h2>
+          
+          <a href="https://goo.gl/maps/feVdfPa5RGkyQkyn7"target="_blank">Anjar</a>  &#11049; <a href="https://whc.unesco.org/en/list/293/"> More Info</a>
+          
+        </h2>
+      <small>NB: If you are going to Anjar also consider going to <a href="https://goo.gl/maps/4EobUP5eoFAT4Gru5">Baalbek.</a></small>
+      </div>  
+    </div>
+    
+    <div class="card">
+      <div class="card__image-holder">
+        <img class="card__image" src="../Heritage/Baalbek.png" />
+      </div>
+      <div class="card-title">
+        <h2>
+          
+          <a href="https://goo.gl/maps/4EobUP5eoFAT4Gru5"target="_blank">Baalbek</a> &#11049; <a href="https://whc.unesco.org/en/list/294/"> More Info</a>
+          </h2>
+          <small> Extra things to do in Baalbek: <a href="https://goo.gl/maps/WJYxUuZ1TvgptTbF8"target="_blank">Ksara Winery</a> 	&#11049; <a href="https://www.tripadvisor.com/Restaurant_Review-g295421-d12029253-Reviews-Lakkis_Farm_Restaurant-Baalbeck_Bekaa_Governorate.html"> Eat Sfiha</a></small>
+        
+       
+      </div>
+     
+    </div>
+    <div class="card">
+      <div class="card__image-holder">
+        <img class="card__image" src="../Heritage/Beiteddine.png" />
+      </div>
+      <div class="card-title">
+        <a href="#" class="toggle-info btn">
+          <span class="left"></span>
+          <span class="right"></span>
+        </a>
+        <h2>
+          
+           <a href="https://goo.gl/maps/ocUSzd1TdEXu3ibT8"target="_blank">Beit Eddine</a> &#11049; <a href="https://www.lonelyplanet.com/lebanon/south-of-beirut/chouf-mountains/attractions/beiteddine-palace/a/poi-sig/1459395/361103"> More Info</a>
+          </h2>
+          <small>Also go to: <a href="https://goo.gl/maps/nCbCgh2M9NcVe4Q87">Deir El Qamar</a></small>
+          
+      </div>
+      
+    </div>
+    <div class="card">
+      <div class="card__image-holder">
+        <img class="card__image" src="../Heritage/Byblos.png" />
+      </div>
+      <div class="card-title">
+        <h2>
+          
+          <a href="https://goo.gl/maps/ETQPyLyeVtkofguG7"target="_blank">Byblos</a>  &#11049; <a href="https://whc.unesco.org/en/list/295/"> More Info</a>
+          
+        </h2>
+        <small>Extra things to do in: <a href="https://www.the961.com/12-things-to-do-in-the-historical-city-of-jbeil/"> Jbeil</a></small>
+          
+      </div>
+    </div>
+
+  
+    <div class="card">
+      <div class="card__image-holder">
+        <img class="card__image" src="../Heritage/Kadisha.png"/> 
+      </div>
+      <div class="card-title">
+        
+        <h2>
+        
+          <a href="https://goo.gl/maps/JAK85eujmZAnU3rG8"target="_blank">Kadisha Valley</a> &#11049; <a href="https://whc.unesco.org/en/list/850/"> More Info</a>
+          
+          
+        </h2>
+        <small>This picture was extracted from: <a href="https://www.nationalgeographic.com/travel/article/qadisha-valley-mountain-hermit-dario-escobar"target="_blank">National Geographic</a></small>
+        
+      <small><br>Also consider going to: <a href ="https://goo.gl/maps/TAP9s9C6guwoUTBZ8">Ceders Mountain</a></small>
+      </div>
+      
+    </div>
+  
+    <div class="card">
+      <div class="card__image-holder">
+        <img class="card__image" src="../Heritage/Tyre.png"  />
+      </div>
+      <div class="card-title">
+        <a href="#" class="toggle-info btn">
+          <span class="left"></span>
+          <span class="right"></span>
+        </a>
+        <h2>
+          
+          <a href="https://goo.gl/maps/NkdvCouFXvoDz1xr7"target="_blank">Tyre </a> &#11049; <a href="https://whc.unesco.org/en/list/299/"> More Info</a></small>
+          </h2>
+          <small>Image from britannica: <a href="https://www.britannica.com/place/Tyre"target="_blank">Link</a> 
+          <br>
+          <small> More to see in Tyre: <a href="https://lebanonexplorer.com/15-best-things-to-do-in-tyre-lebanon/"target="_blank">Link</a> </small> 
+        
+      </div>
+    </div>
+  
+   
+  
+   
+  
+    
+    </div>
+  
+  </div>
+  <!-- End of Card Layout-->
+</body>
+</html>
+<!--End of HTML page-->
