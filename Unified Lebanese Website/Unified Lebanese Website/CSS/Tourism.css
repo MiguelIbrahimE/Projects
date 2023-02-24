@@ -59,7 +59,7 @@
     line-height: 1.6;
   }
   /*All size matters, allocate reasonbale size for all screens*/
-  @media screen and (max-width: 268px) {
+  @media screen and (max-width: 168px) {
     .main-menu {
       position: absolute;
       top: 50px;
@@ -276,5 +276,9 @@ div.card.show div.flap2 {
 }
 a{
   color:rgb(221, 197, 197);
-  
+  text-decoration: none;
+}
+@media (min-width: 1045px) { 
+   
+  .dropbtn {display:none;}
 }

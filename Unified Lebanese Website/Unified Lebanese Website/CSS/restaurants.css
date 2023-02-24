@@ -254,3 +254,31 @@
       }
   /*Images have to be 1032 x 924 size!! */
   /*End of CSS code*/
+  /* Define the dimensions of the stars */
+.rating {
+  display: inline-block;
+  font-size: 1.5em;
+  font-family: Arial, sans-serif;
+}
+
+/* Define the styles for the full star */
+.star {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  background: url("../Stars/star-full.jpeg") 0 0 no-repeat;
+}
+
+/* Define the styles for the half star */
+.star.half {
+  background: url('star-half.png') 0 0 no-repeat;
+}
+
+/* Define the styles for the empty star */
+.star.empty {
+  background: url('star-empty.png') 0 0 no-repeat;
+}
+.checked {
+  color: orange;
+}
