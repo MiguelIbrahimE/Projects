@@ -114,3 +114,36 @@ returnBtn.addEventListener("click", function() {
     main.style.display = "block";
     createacct.style.display = "none";
 });
+
+
+
+submitButton.addEventListener("click", function() {
+  email = emailInput.value;
+  console.log(email);
+  password = passwordInput.value;
+  console.log(password);
+
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in
+      const user = userCredential.user;
+      console.log("Success! Welcome back!");
+      window.alert("Success! Welcome back!");
+      // Generate Firebase ID token
+      user.getIdToken().then(function(idToken) {
+        // Send token to your server-side code
+        // This can be done using an AJAX request or a form submission
+        console.log(idToken);
+      }).catch(function(error) {
+        console.log(error);
+      });
+      window.location.href = './Personalized-Tourism.html';
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log("Error occurred. Try again.");
+      window.alert("Error occurred. Try again.");
+    });
+});

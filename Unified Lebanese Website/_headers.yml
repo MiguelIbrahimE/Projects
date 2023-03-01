@@ -1,20 +1,81 @@
-#path for restaurants:
-/Restaurants.html
+#path for Restaurants:
+./Pages/Restaurants.html
     #headers for path:
     X-Content-Type-Options: nosniff
     X-XSS-Protection: 1; mode=block
     X-Frame-Options: DENY
 
-#path for index
-/index.html
+#path for Index
+./Pages/index.html
     #headers for path:
     X-Frame-Options: DENY
     X-Content-Type-Options: nosniff
     X-XSS-Protection: 1; mode=block
+
+#path for Tourism
+./Pages/Tourism.html
+    X-Content-Type-Options: nosniff
+    X-XSS-Protection: 1; mode=block
+    X-Frame-Options: DENY
+
+#path for Anjar
+./Pages/Anjar.html
+    X-Content-Type-Options: nosniff
+    X-XSS-Protection: 1; mode=block
+    X-Frame-Options: DENY
+
+#path for Buses
+./Pages/Tourism.html
+    X-Content-Type-Options: nosniff
+    X-XSS-Protection: 1; mode=block
+    X-Frame-Options: DENY
+
+#path for Tyre
+./Pages/Tyre.html
+    X-Content-Type-Options: nosniff
+    X-XSS-Protection: 1; mode=block
+    X-Frame-Options: DENY
+
+#path for Transportaton
+./Pages/Transportation.html
+    X-Content-Type-Options: nosniff
+    X-XSS-Protection: 1; mode=block
+    X-Frame-Options: DENY
+
+#path for Baalbek
+./Pages/Baalbek.html
+    X-Content-Type-Options: nosniff
+    X-XSS-Protection: 1; mode=block
+    X-Frame-Options: DENY
+
+#path for SignUp
+./Pages/SingUp.html
+    X-Content-Type-Options: nosniff
+    X-XSS-Protection: 1; mode=block
+    X-Frame-Options: DENY
+
+#path for Lebanon
+./Pages/Lebanon.html
+    X-Content-Type-Options: nosniff
+    X-XSS-Protection: 1; mode=block
+    X-Frame-Options: DENY
 
 #path for tourism
-/Tourism.html
+./Pages/Tourism.html
     X-Content-Type-Options: nosniff
     X-XSS-Protection: 1; mode=block
     X-Frame-Options: DENY
+
+#path for Kadisha
+./Pages/Kadisha.html
+    X-Content-Type-Options: nosniff
+    X-XSS-Protection: 1; mode=block
+    X-Frame-Options: DENY
+
+#path for tourism
+./Pages/Personalized-Tourism.html
+    X-Content-Type-Options: nosniff
+    X-XSS-Protection: 1; mode=block
+    X-Frame-Options: DENY
+
 

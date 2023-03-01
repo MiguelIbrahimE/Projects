@@ -28,4 +28,10 @@ view this webpage and interact, I dont care if it got leaked
 the only thing I care about is people cross site Scripting rerouting 
 users to another webpage.
 
+Version 2.1:
+After including extra pages such as the sign in- log in- sign up pages
+many extra problems surfaced such as providing a hashed password using firebase
+as well as securing the layer while being sent using SSL
+
+
     
